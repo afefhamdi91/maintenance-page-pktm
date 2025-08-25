@@ -272,6 +272,18 @@
             }
         }
     </style>
+    <script>
+  const redirects = {
+    "/divers/groupe": "https://voyages.parkatem.com/groupes",
+   // "/brochure-groupes": "https://voyages.parkatem.com/brochure-groupes-parkatem",
+    // Ajoutez toutes les autres URLs ici
+  };
+
+  const currentPath = window.location.pathname;
+  if (redirects[currentPath]) {
+    window.location.href = redirects[currentPath];
+  }
+</script>
 </head>
 <body>
     <div class="maintenance-container">
@@ -356,4 +368,5 @@
         window.onload = startCountdown;
     </script>
 </body>
+
 </html>
