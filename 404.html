@@ -272,7 +272,28 @@
             }
         }
     </style>
-  <script>
+
+    <script>
+  // Liste des redirections
+  const redirects = {
+    "/divers/groupe": "https://voyages.parkatem.com/groupes",
+    "/brochure-groupes": "https://voyages.parkatem.com/brochure-groupes-parkatem",
+    "/demande-devis": "https://voyages.parkatem.com/demande-devis-groupe-parkatem",
+    "/groupes-completer": "https://voyages.parkatem.com/groupes-a-completer",
+    "/portaventura": "https://voyages.parkatem.com/offres-groupes-portaventura",
+    "/europa-park": "https://voyages.parkatem.com/offres-groupes-europa-park",
+    "/harry-potter": "https://voyages.parkatem.com/offres-groupes-studios-harry-potter"
+  };
+
+  // Récupère le chemin de l'URL actuelle
+  const currentPath = window.location.pathname;
+
+  // Vérifie si le chemin doit être redirigé
+  if (redirects[currentPath]) {
+    window.location.href = redirects[currentPath];
+  }
+</script>
+      <script>
   // Affiche la page de maintenance pour toutes les URLs
   document.addEventListener('DOMContentLoaded', function() {
     // Si vous voulez rediriger vers la racine :
