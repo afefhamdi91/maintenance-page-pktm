@@ -5,8 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirection - Parkatem</title>
     <script>
-        // Redirection immédiate vers voyages.parkatem.com
-        window.location.href = "https://voyages.parkatem.com";
+        // Liste des redirections spécifiques
+        const redirects = {
+            "/": "https://voyages.parkatem.com",
+            "/divers/groupe": "https://voyages.parkatem.com/groupes",
+            "/divers/nos-brochures": "https://voyages.parkatem.com/brochure-groupes-parkatem",
+            "/devis-group": "https://voyages.parkatem.com/demande-devis-groupe-parkatem",
+            "/destination/groupes-a-completer": "https://voyages.parkatem.com/groupes-a-completer",
+            "/destination/offres-groupes-portaventura": "https://voyages.parkatem.com/offres-groupes-portaventura",
+            "/parc/portaventura-world": "https://voyages.parkatem.com/offres-groupes-portaventura",
+            "/destination/offres-groupes-europa-park": "https://voyages.parkatem.com/offres-groupes-europa-park",
+            "/parc/europa-park": "https://voyages.parkatem.com/offres-groupes-europa-park",
+            "/destination/offres-groupes-harry-potter": "https://voyages.parkatem.com/offres-groupes-studios-harry-potter",
+            "/parc/warner-bros-studio-tour-harry-potter": "https://voyages.parkatem.com/offres-groupes-studios-harry-potter",
+            "/destination/offres-groupes-balneaire": "https://voyages.parkatem.com/offres-groupes-balneaire",
+            "/destination/offres-groupes-city-break": "https://voyages.parkatem.com/offres-groupes-city-break",
+            "/destination/offres-groupes-football": "https://voyages.parkatem.com/offres-groupes-football",
+            "/divers/mentions-legales": "https://voyages.parkatem.com/mentions-legales"
+        };
+
+        // Récupère le chemin de l'URL actuelle
+        const currentPath = window.location.pathname;
+    
+        // Vérifie si le chemin doit être redirigé
+        if (redirects[currentPath]) {
+            window.location.href = redirects[currentPath];
+        } else {
+            // Redirection par défaut pour toutes les autres pages
+            window.location.href = "https://voyages.parkatem.com";
+        }
     </script>
 </head>
 <body>
