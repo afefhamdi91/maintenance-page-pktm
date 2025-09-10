@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirection - Parkatem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script>
      // Liste des redirections
         const redirects = {
@@ -23,17 +25,20 @@
             "/destination/offres-groupes-football": "https://voyages.parkatem.com/offres-groupes-football",
             "/divers/mentions-legales": "https://voyages.parkatem.com/mentions-legales"
         };
-
-        // Récupère le chemin de l'URL actuelle
-        const currentPath = window.location.pathname;
+      // Récupère le chemin de l'URL actuelle
+      const currentPath = window.location.pathname;
     
-        // Vérifie si le chemin doit être redirigé
-        if (redirects[currentPath]) {
-            window.location.href = redirects[currentPath];
-        } else {
-            // Redirection par défaut si le chemin n'est pas dans la liste
-            window.location.href = "https://voyages.parkatem.com";
-        }
+      // Vérifie si le chemin doit être redirigé
+      if (redirects[currentPath]) {
+        window.location.href = redirects[currentPath];
+      }
+</script>
+<script>
+  // Affiche la page de maintenance pour toutes les URLs
+  document.addEventListener('DOMContentLoaded', function() {
+    // Si vous voulez rediriger vers la racine :
+    // window.location.href = '/';
+  });
 </script>
 </head>
 <body>
